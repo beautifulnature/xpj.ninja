@@ -1,10 +1,10 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-	<head th:replace="header.thyme::head"/>
+	<head th:replace="snippets.thyme::head"/>
 	<body onload="prettyPrint()">
 	<div id="wrap">
-		<div th:replace="menu.thyme::menu"/>
+		<div th:replace="snippets.thyme::menu"/>
 		<div class="container">
 			<div class="page-header">
 				<h1>xpj.ninja</h1>
@@ -20,15 +20,12 @@
                                            summary=${ pend lt 0 ? 'No summary available' : #strings.substring(post.body,pstart,pend) + '</p>'}"
                                            th:utext='${summary}' th:remove="tag">The first &lt;p&gt; element of <code>of</code> will appear here
                                         </p>
+                <hr/>
 			</div>
-				
-			<hr />
-			
-			<p>Older posts are available in the <a th:href='${content.rootpath+config.archive_file}' href='href'>archive</a>.</p>
 		</div>
 	</div>
 	
-	<div th:replace="footer.thyme::footer"></div>
+	<div th:replace="snippets.thyme::footer"></div>
 	<script th:replace="snippets.thyme::googleAnalytics" />
     </body>
 </html>
