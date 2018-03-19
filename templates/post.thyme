@@ -20,5 +20,6 @@
 		</div>
 	</div>
 	<div th:replace="footer.thyme::footer"></div>
+	<script th:replace="snippets.thyme::googleAnalytics" />
     </body>
 </html>
