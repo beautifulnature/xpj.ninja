@@ -23,6 +23,7 @@
 	    <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'css/asciidoctor.css'" rel="stylesheet"/>
 	    <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'css/base.css'" rel="stylesheet"/>
 	    <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'css/prettify.css'" rel="stylesheet"/>
+	    <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'css/open-iconic-bootstrap.min.css'" rel="stylesheet">
 
 	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>
@@ -33,23 +34,23 @@
 
 	<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" th:fragment="menu">
 	  <div class="container">
-      <span class="navbar-brand mb-0 h1 text-primary">xpj.ninja</span>
+      <span class="navbar-brand mb-0 h1 text-primary"><span class="oi oi-dashboard"></span>&nbsp;xpj.ninja</span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" th:href="|${content.rootpath}index.html|">Home</a>
+            <a class="nav-link" th:href="|${content.rootpath}index.html|"><span class="oi oi-home" title="home" aria-hidden="true"></span>&nbsp;Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" th:href="|${content.rootpath}about.html|">About</a>
+            <a class="nav-link" th:href="|${content.rootpath}about.html|"><span class="oi oi-person" title="person" aria-hidden="true"></span>&nbsp;About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" th:href="|${content.rootpath}${config.archive_file}|">Archive</a>
+            <a class="nav-link" th:href="|${content.rootpath}${config.archive_file}|"><span class="oi oi-folder" title="folder" aria-hidden="true"></span>&nbsp;Archive</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" th:href="|${content.rootpath}${config.feed_file}|">RSS</a>
+            <a class="nav-link" th:href="|${content.rootpath}${config.feed_file}|"><span class="oi oi-rss-alt" title="rss-alt" aria-hidden="true"></span>&nbsp;RSS</a>
           </li>
         </ul>
       </div>
