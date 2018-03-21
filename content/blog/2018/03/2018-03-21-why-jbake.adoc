@@ -1,6 +1,6 @@
 = JBake as a Blogging Platform
 xpj
-2018-03-18
+2018-03-21
 :jbake-type: post
 :jbake-status: published
 :jbake-tags: jbake
